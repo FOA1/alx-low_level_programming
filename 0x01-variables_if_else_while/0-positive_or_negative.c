@@ -4,9 +4,10 @@
 /* more headers goes there */
 
 /**
- * This code check a given random number
- * to see if it is positive 
- * or negative.
+ * main - Checks a given random number
+ * 		to see if it is positive or Negative
+ * 
+ * Return: Always 0.
  */
 int main(void)
 {
