@@ -5,8 +5,7 @@
 
 /**
  * main - Checks a given random number
- * 		to see if it is positive or Negative
- * 
+ *		to see if it is positive or Negative
  * Return: Always 0.
  */
 int main(void)
