@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_alphabet - Write a function that prints the alphabet,
+ * print_alphabet_x10 - Write a function that prints the alphabet,
  * in lowercase, multiplied it by 10, followed by a new line.
  *
  * Return: Always Success
