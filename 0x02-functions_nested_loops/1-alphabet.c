@@ -3,11 +3,11 @@
  * print_alphabet - Write a function that prints the alphabet,
  * in lowercase, followed by a new line.
  *
- * Return: Always 0.
+ * Return: Always Success
  */
-int main (void)
+void print_alphabet(void)
 {
-	int count;
+	char count;
 
 	for (count = 'a'; count <= 'z'; count++)
 	{
