@@ -6,18 +6,10 @@
  */
 int _islower(int c)
 {
-	char count = 'a';
+	if (c>= 'a' && c<= 'z')
+		return (1);
+	else
+		return (0);
 
-	for (count = 'a'; count <= 'z'; count++)
-	{
-		if (c == count)
-		{
-			return (1);
-			break;
-		}
-		else
-			return (0);
-	}
-	
 	return (0);
 }
