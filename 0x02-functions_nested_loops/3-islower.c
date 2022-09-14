@@ -6,7 +6,7 @@
  */
 int _islower(int c)
 {
-	char count = 'a'
+	char count = 'a';
 
 	for (count = 'a'; count <= 'z'; count++)
 	{
@@ -17,7 +17,7 @@ int _islower(int c)
 	}
 	for (count = 'A'; count <= 'Z'; count++)
 	{
-		if (r == count)
+		if (c == count)
 		{
 			_putchar(0 + '0');
 		}
