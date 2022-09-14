@@ -10,17 +10,18 @@
 
 int print_last_digit(int num)
 {
-	int abs, rem;
+	int abs_num;
+	int rem;
 
 	if (num < 0)
 	{
-		abs = (-num);
-		rem = (abs%10);
+		abs_num = -num;
+		rem = abs_num%10;
 		_putchar(rem);
 	}
 	else
 	{
-		rem = (abs%10);
+		rem = abs_num%10;
 		_putchar(rem);
 	}
 
