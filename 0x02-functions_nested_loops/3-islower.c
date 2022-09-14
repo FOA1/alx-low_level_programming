@@ -12,14 +12,14 @@ int _islower(int c)
 	{
 		if (c == count)
 		{
-			_putchar(1 + '0');
+			_putchar(1);
 		}
 	}
 	for (count = 'A'; count <= 'Z'; count++)
 	{
 		if (c == count)
 		{
-			_putchar(0 + '0');
+			_putchar(0);
 		}
         }
 	
