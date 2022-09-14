@@ -3,7 +3,7 @@
  * _abs - Write a function that prints
  * absolute value of numbers.
  *
- * @int: The number to check
+ * @num: The number to check
  *
  * Return: Always Success
  */
