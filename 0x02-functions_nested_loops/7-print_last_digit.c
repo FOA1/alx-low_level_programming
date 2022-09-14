@@ -10,20 +10,6 @@
 
 int print_last_digit(int num)
 {
-	int abs_num;
-	int rem;
-
-	if (num < 0)
-	{
-		abs_num = -num;
-		rem = abs_num%10;
-		_putchar(rem);
-	}
-	else
-	{
-		rem = abs_num%10;
-		_putchar(rem);
-	}
-
+	_putchar ((num%10) + '0');
 	return (0);
 }
