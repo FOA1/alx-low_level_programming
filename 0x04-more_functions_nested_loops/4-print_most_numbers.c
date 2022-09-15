@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * main - Prints all single digit numbers
- * starting from 0 in base 10
+ * print_most_numbers - Prints numbers 0 t0 9
+ * followed by a new line
  *
  * Return: Always 0.
  */
