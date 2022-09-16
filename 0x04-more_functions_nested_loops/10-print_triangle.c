@@ -13,17 +13,23 @@ void print_triangle(int size)
 	int j;
 	int k, m = 1;
 
-	for (i = size; i >= 1; i--)
+	if (size <= 0)
+		printf("\n");
+
+	else
 	{
-		for (j = 1; j <= i - 1; j++)
+		for (i = size; i >= 1; i--)
 		{
-			printf(" ");
+			for (j = 1; j <= i - 1; j++)
+			{
+				printf(" ");
+			}
+			for (k = 1; k <= m; k++)
+			{
+				printf("#");
+			}
+		printf("\n");
+		m++;
 		}
-		for (k = 1; k <= m; k++)
-		{
-			printf("#");
-		}
-	printf("\n");
-	m++;
 	}
 }
