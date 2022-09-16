@@ -21,11 +21,20 @@ int main(void)
 				continue;
 			}
 			else if (((i % 3) == 0) && ((i % 5) == 0))
+			{
 				printf("fizzBuzz ");
+				continue;
+			}
 			else if ((i % 3) == 0)
+			{
 				printf("Fizz ");
+				continue;
+			}
 			else if ((i % 5) == 0)
+			{
 				printf("Buzz ");
+				continue;
+			}
 			else
 				printf("%d ", i);
 
