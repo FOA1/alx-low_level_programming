@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_triangles - Prints square to form triangle pattern the screen using #
+ * print_triangle - Prints square to form triangle pattern the screen using #
  *
  * @size: the number of times # will be printed.
  *
@@ -11,22 +11,19 @@ void print_triangle(int size)
 {
 	int i;
 	int j;
+	int k, m = 1;
 
-	if (size <= 0)
-		_putchar('\n');
-	else
+	for (i = size; i >= 1; i--)
 	{
-		for (i = 0; i < size; i++)
+		for (j = 1; j <= i - 1; j++)
 		{
-			for (j = 0; j < size; j++)
-			{
-				if (j < size)
-				{
-					for (k = 0; k < size - 1; k++)
-						_putchar(' ');
-						_putchar('#');
-			}
-			_putchar('\n');
+			printf(" ");
 		}
+		for (k = 1; k <= m; k++)
+		{
+			printf("#");
+		}
+	printf("\n");
+	m++;
 	}
 }
