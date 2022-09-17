@@ -17,5 +17,6 @@
 	void fizz_buzz(void);
 	void print_triangle(int size);
 	void print_number(int n);
+	void print_long(int long_num);
 
 #endif /* MAIN-H */
