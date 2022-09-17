@@ -18,15 +18,13 @@ int main(void)
 			if ((i % 15) == 0)
 			{
 				printf("fizzBuzz");
-				if (i != 100)
-					printf(" ");
+				printf(" ");
 				continue;
 			}
 			else if ((i % 3) == 0)
 			{
 				printf("Fizz");
-				if (i != 100)
-					printf(" ");
+				printf(" ");
 				continue;
 			}
 			else if ((i % 5) == 0)
@@ -39,8 +37,7 @@ int main(void)
 			else
 			{
 				printf("%d", i);
-				if (i != 100)
-					printf(" ");
+				printf(" ");
 			}
 		}
 		printf("\n");
