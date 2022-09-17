@@ -9,7 +9,6 @@
  */
 int main(void)
 {
-	int i;
 	long int prev_num = 1,
 		pre_prev_num = 0,
 		new_num = 0,
