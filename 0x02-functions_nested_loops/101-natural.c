@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - prints the sum of the multiples 
+ * main - prints the sum of the multiples
  * of 3 and 5 between 1 and 1024.
  *
  * Return: Always 0.
@@ -24,8 +24,8 @@ int main(void)
 		}
 		else if ((i % 3) == 0)
 		{
-			 sum = sum + i;
-			 continue;
+			sum = sum + i;
+			continue;
 		}
 		else
 			continue;
