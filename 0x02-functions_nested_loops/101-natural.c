@@ -1,45 +1,36 @@
-#include "main.h"
 #include <stdio.h>
 /**
- * times_table - Write a function that prints multiplication
- * table 9. starting from 0.
+ * main - prints the sum of the multiples 
+ * of 3 and 5 between 1 and 1024.
  *
- *
- * Return: Always Success
+ * Return: Always 0.
  */
-void times_table(void)
+int main(void)
 {
 	int i;
-	int j;
-	int product;
+	int sum = 0;
 
-	for (i = 0; i <= 9; i++)
+	for (i = 1; i < 1024; i++)
 	{
-		for (j = 0; j <= 9; j++)
+		if ((i % 15) == 0)
 		{
-			product = i * j;
-			if (product > 9)
-			{
-				_putchar((product / 10) + '0');
-				_putchar((product % 10) + '0');
-			}
-			else
-			{
-				if (j == 0)
-					_putchar((product % 10) + '0');
-				else
-				{
-					_putchar(' ');
-					_putchar((product % 10) + '0');
-				}
-			}
-
-			if (j == 9)
-				continue;
-
-			_putchar(',');
-			_putchar(' ');
+			sum = sum + i;
+			continue;
 		}
-		_putchar('\n');
+		else if ((i % 5) == 0)
+		{
+			sum = sum + i;
+			continue;
+		}
+		else if ((i % 3) == 0)
+		{
+			 sum = sum + i;
+			 continue;
+		}
+		else
+			continue;
 	}
+	printf("%d\n", sum);
+
+	return (0);
 }
