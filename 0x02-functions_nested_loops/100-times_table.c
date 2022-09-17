@@ -1,44 +1,72 @@
 #include "main.h"
 /**
- * times_table - Write a function that prints multiplication
- * table 9. starting from 0.
+ * print_l - prints long integers using _putchar
  *
+ * @l_num: The integer to print
+ * Return: Always success
+ */
+
+void print_l(int l_num)
+{
+	if (l_num < 0)
+	{
+		_putchar('-');
+		l_num = -l_num;
+	}
+
+	if (l_num == 0)
+		_putchar('0');
+
+	if (l_num / 10)
+		print_l(l_num / 10);
+
+	if (l_num != 0)
+		_putchar(l_num % 10 + '0');
+}
+/**
+ * print_times_table - Write a function that prints multiplication
+ * table n. starting from 0.
+ *
+ * @n: the number to check
  *
  * Return: Always Success
  */
-void times_table(void)
+void print_times_table(int n)
 {
-	int i;
-	int j;
-	int product;
-
-	for (i = 0; i <= 9; i++)
+	if (n >= 0 && n <= 15)
 	{
-		for (j = 0; j <= 9; j++)
+		int i, j, product, next_pro;
+
+		for (i = 0; i <= n; i++)
 		{
-			product = i * j;
-			if (product > 9)
+			for (j = 0; j <= n; j++)
 			{
-				_putchar((product / 10) + '0');
-				_putchar((product % 10) + '0');
-			}
-			else
-			{
-				if (j == 0)
-					_putchar((product % 10) + '0');
+				product = i * j;
+				if (product > 9)
+					print_l(product);
 				else
+					_putchar((product % 10) + '0');
+				if (j == n)
+					continue;
+
+				_putchar(',');
+				_putchar(' ');
+				next_pro = i * j + 1;
+
+				if (next_pro < 10)
 				{
 					_putchar(' ');
-					_putchar((product % 10) + '0');
+					_putchar(' ');
 				}
+				else if (next_pro >= 10 && next_pro < 100)
+					_putchar(' ');
+				else
+					continue;
 			}
-
-			if (j == 9)
-				continue;
-
-			_putchar(',');
-			_putchar(' ');
+			_putchar('\n');
 		}
-		_putchar('\n');
 	}
+
+	else
+		_putchar('\n');
 }
