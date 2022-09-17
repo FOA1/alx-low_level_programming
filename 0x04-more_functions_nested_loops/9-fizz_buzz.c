@@ -15,30 +15,35 @@ int main(void)
 	{
 		for (i = 1; i <= 100; i++)
 		{
-			if (i == 100)
+			if ((i % 15) == 0)
 			{
-				printf("Buzz\n");
-				continue;
-			}
-			else if (((i % 3) == 0) && ((i % 5) == 0))
-			{
-				printf("fizzBuzz ");
+				printf("fizzBuzz");
+				if (i != 100)
+					printf(" ");
 				continue;
 			}
 			else if ((i % 3) == 0)
 			{
-				printf("Fizz ");
+				printf("Fizz");
+				if (i != 100)
+					printf(" ");
 				continue;
 			}
 			else if ((i % 5) == 0)
 			{
-				printf("Buzz ");
+				printf("Buzz");
+				if (i != 100)
+					printf(" ");
 				continue;
 			}
 			else
-				printf("%d ", i);
-
+			{
+				printf("%d", i);
+				if (i != 100)
+					printf(" ");
+			}
 		}
+		printf("\n");
 	}
 
 	return (0);
