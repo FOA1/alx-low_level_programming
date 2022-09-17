@@ -10,22 +10,19 @@
 
 int print_last_digit(int num)
 {
-	if (num > 0)
+	int i;
+	if (num >= 0)
 	{
-		num = ((num % 10) + '0');
-		_putchar(num);
-	}
-	else if (num == 0)
-	{
-		_putchar('0');
+		i = ((num % 10) + '0');
+		_putchar(i);
 	}
 	else
 	{
-		num = -num;
-		num = ((num % 10) + '0');
-		_putchar(num);
+		i = -num;
+		i = ((i % 10) + '0');
+		_putchar(i);
 	}
 
 
-	return (num);
+	return (i);
 }
