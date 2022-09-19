@@ -9,10 +9,9 @@ void print_array(int *a, int n)
 {
 	int i;
 
-	if (a[0] == '\0')
-		printf("\n");
-	if (n == 1)
-		printf("%d\n", *a);
+	/* if ((a[0] == '\0') && (n < 1)) */
+	if (n <= 0)
+		printf('\n');
 	else
 	{
 		for (i = 0; i < n; i++)
