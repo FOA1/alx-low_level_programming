@@ -11,6 +11,7 @@ void print_rev(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 		l = i + 1;
+
 	if (l == 0)
 		_putchar('\n');
 	else
