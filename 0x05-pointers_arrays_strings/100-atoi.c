@@ -1,11 +1,10 @@
 #include <stdio.h>
 /**
- *  _strcpy - a function that copies the string pointed to by src,
+ *  _atoi - a function that copies the string pointed to by src,
  *  including the terminating null byte (\0),
  *  to the buffer pointed to by dest.
  *
- *  @dest: the destination string
- *  @src: the source string
+ *  @s: the passed character
  *
  *  Return: pointer to the destination string
  */
