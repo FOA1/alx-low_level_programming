@@ -13,16 +13,16 @@ int _atoi(char *s)
 	int i, l;
 
 	{
-		for (i = 0; src[i] != '\0'; i++)
+		for (i = 0; s[i] != '\0'; i++)
 			l = i + 1;
 		if (l <= 0)
 			i = 0;
 		else
 		{
 			for (i = 0; i <= l; i++)
-				dest[i] = src[i];
+				s[i] = s[i] + 32;
 		}
 	}
-	return (dest);
+	return (0);
 }
 
