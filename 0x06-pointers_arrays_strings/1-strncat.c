@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strcat - Convatenates two strings
+ * _strncat - Convatenates two strings
  *
  * @dest: the destination string
  * @src: the source string
@@ -21,7 +21,7 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		for (i = 0; dest[i] != '\0'; i++)
 			len_dest = i + 1;
-		for (i = 0; i < n; i++)
+		for (i = 0; i < n && src[i] != '\0'; i++)
 		{
 			dest[len_dest + i] = src[i];
 		}
