@@ -17,16 +17,12 @@ char *_strncpy(char *dest, char *src, int n)
 	for (i = 0; dest[i] != '\0'; i++)
 		lenDest = i + 1;
 
-	if (lenSrc < 0)
-		return (0);
-	else if (lenSrc == 0)
-	{
-		dest[i] = '\0';
-	}
+	if (lenSrc < 0 || n < 0)
+		return (dest);
 	else
 	{
 		if (lenDest < n)
-			return (0);
+			return (dest);
 		for (i = 0; i < n && src[i] != '\0'; i++)
 		{
 			dest[i] = src[i];
