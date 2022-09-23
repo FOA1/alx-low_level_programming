@@ -11,5 +11,6 @@
 	char *cap_string(char *p);
 	char *leet(char *p);
 	char *infinite_add(char *n1, char *n2, char *r, int size_r);
+	char *rot13(char *s);
 
 #endif /* MAIN-H */
