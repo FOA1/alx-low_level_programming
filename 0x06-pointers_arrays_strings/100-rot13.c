@@ -1,7 +1,6 @@
 #include "main.h"
 /**
  * rot13 - encodes messages using the rot13 code
- * 
  * @s: the string to encode
  * Return: zero
  */
