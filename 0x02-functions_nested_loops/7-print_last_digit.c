@@ -5,24 +5,16 @@
  *
  * @num: The number to check
  *
- * Return: Always Success.
+ * Return: zero.
  */
 
 int print_last_digit(int num)
 {
-	int i;
-	if (num >= 0)
-	{
-		i = ((num % 10) + '0');
-		_putchar(i);
-	}
-	else
-	{
-		i = -num;
-		i = ((i % 10) + '0');
-		_putchar(i);
-	}
+	if (num < 0)
+		num = -num;
+
+	_putchar((num % 10) + '0');
 
 
-	return (i);
+	return (0);
 }
