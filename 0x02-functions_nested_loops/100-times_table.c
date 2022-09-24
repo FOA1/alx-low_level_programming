@@ -1,5 +1,18 @@
 #include "main.h"
 /**
+ * print_l - prints long integers using _putchar
+ * @l_num: The integer to print
+ * Return: Nothing
+ */
+
+void print_l(int l_num)
+{
+	if (l_num / 10)
+		print_l(l_num / 10);
+	_putchar(l_num % 10 + '0');
+}
+
+/**
  * print_times_table - Write a function that prints multiplication
  * @n: the number to Multiply
  * Return: Nothing
