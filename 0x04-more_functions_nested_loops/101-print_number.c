@@ -1,4 +1,5 @@
 #include "main.h"
+#include <limits.h>
 /**
  * print_l - prints long integers using _putchar
  *
@@ -11,17 +12,20 @@ void print_l(int l_num)
 	if (l_num < 0)
 	{
 		_putchar('-');
-		l_num = -l_num;
+		if (l_num / 10)
+			 print_l(l_num / 10);
+		_putchar('0' - l_num % 10);
 	}
 
-	if (l_num == 0)
+	else if (l_num == 0)
 		_putchar('0');
 
-	if (l_num / 10)
-		print_l(l_num / 10);
-
-	if (l_num != 0)
+	else
+	{
+		if (l_num / 10)
+			print_l(l_num / 10);
 		_putchar(l_num % 10 + '0');
+	}
 }
 
 /**
