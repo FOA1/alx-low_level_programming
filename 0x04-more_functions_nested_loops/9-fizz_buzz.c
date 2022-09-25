@@ -30,9 +30,13 @@ int main(void)
 			else if ((i % 5) == 0)
 			{
 				printf("Buzz");
-				if (i != 100)
+				if (i == 100)
+					continue;
+				else
+				{
 					printf(" ");
-				continue;
+					continue;
+				}
 			}
 			else
 			{

@@ -11,7 +11,7 @@ void print_l(int l_num)
 	if (l_num < 0)
 	{
 		_putchar('-');
-		l_num = -1 * l_num;
+		l_num = -l_num;
 	}
 
 	if (l_num == 0)
