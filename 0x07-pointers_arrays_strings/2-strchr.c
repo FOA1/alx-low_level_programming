@@ -18,15 +18,12 @@ char *_strchr(char *s, char c)
 		i = 0;
 	else
 	{
-		for (i = 0; i < len ; i++)
+		while (*s)
 		{
-			if (s[i] == c)
-			{
-				*s = s[i];
-				break;
-			}
-			return (0);
+			if (*s == c)
+				return (char *)s;
+			++s;
 		}
 	}
-	return (s);
+	return (0);
 }
