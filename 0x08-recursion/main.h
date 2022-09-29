@@ -13,5 +13,6 @@
 	int is_palindrome(char *s);
 	void  check(char *s, int start, int end, int *flag);
 	int _sqrt_recursion(int n);
+	int _sqrt(int n, int x);
 
 #endif /* MAIN_H */
