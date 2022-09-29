@@ -3,6 +3,8 @@
  * _sqrt_recursion - finds the square root of a number
  *
  * @n: the number to check
+ *
+ * Return: the square root of n
  */
 int _sqrt_recursion(int n)
 {
