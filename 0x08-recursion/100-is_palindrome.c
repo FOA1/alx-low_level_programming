@@ -42,7 +42,8 @@ void  check(char *s, int start, int end, int *flag)
 int _strlen_recursion(char *s)
 {
 	int count = 0;
-	if (!*s)
+
+	if (*s)
 	{
 		count++;
 		count += (_strlen_recursion(s + 1));
