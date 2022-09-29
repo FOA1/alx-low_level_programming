@@ -16,6 +16,7 @@ int _sqrt_recursion(int n)
  * @n: the test number
  * @x: the squared number
  *
+ * Return: the square root of n
  */
 int _sqrt(int n, int x)
 {
