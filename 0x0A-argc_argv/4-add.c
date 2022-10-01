@@ -3,7 +3,7 @@
 #include <ctype.h>
 /**
  * isnumber - checks whether an input is number or not
- * @number - the input
+ * @number: the input
  *
  * Return: true or false
  */
@@ -38,11 +38,11 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-				if (isnumber(argv[i]))
-				{
-					printf("Error\n");
-					return (1);
-				}
+			if (isnumber(argv[i]))
+			{
+				printf("Error\n");
+				return (1);
+			}
 			sum = sum + atoi(argv[i]);
 		}
 		printf("%d\n", sum);
