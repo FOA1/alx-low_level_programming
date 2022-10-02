@@ -2,24 +2,6 @@
 #include <stdlib.h>
 #include <ctype.h>
 /**
- * isnumber - checks whether an input is number or not
- * @number: the input
- *
- * Return: true or false
- */
-int isnumber(char number[])
-{
-	int k = 0;
-
-	for (k = 0; number[k] != '\0'; k++)
-	{
-		if (isdigit(number[k]))
-			return (0);
-	}
-	return (1);
-}
-
-/**
  * main - a program that prints the arguments passed into it.
  *
  * @argc: the argument count
@@ -30,7 +12,7 @@ int isnumber(char number[])
 int main(int argc, char *argv[])
 {
 	int sum = 0;
-	int i = 0;
+	int i = 0, j = 0;
 
 	if (argc == 1)
 		printf("%d\n", sum);
@@ -38,15 +20,20 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (isnumber(argv[i]))
+			for (j = 0; argv[i][j]; j++)
 			{
-				printf("Error\n");
-				return (1);
+				if (!isdigit(argv[i][j]))
+				{
+					printf("Error\n");
+					return (1);
+				}
 			}
+		}
+		for (i = 1; i < argc; i++)
+		{
 			sum = sum + atoi(argv[i]);
 		}
 		printf("%d\n", sum);
 	}
-
 	return (0);
 }
