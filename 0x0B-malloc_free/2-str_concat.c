@@ -1,11 +1,11 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * _strdup - Write a function that returns a pointer to a newly allocated
- *		space in memory, which contains a copy of the string given as a parameter.
- * @str: The given string
+ * str_concat - a function that concatenates two strings.
+ * @s1: The first string
+ * @s2: The second string
  *
- * Return: a pointer to the array, or NULL if it fails
+ * Return: a pointer to the combined strings, or NULL if it fails
  */
 char *str_concat(char *s1, char *s2)
 {
@@ -14,19 +14,35 @@ char *str_concat(char *s1, char *s2)
 
 	for (i = 0; s1[i] != '\0'; i++)
 		len1++;
-	 for (i = 0; s2[i] != '\0'; i++)
+	for (i = 0; s2[i] != '\0'; i++)
 		 len2++;
 
-	totLen = len1 + len2;
-	p = (char *) malloc(totLen + 1);
-
-	if (p == NULL)
+	if (s1 == NULL && s2 == NULL)
 		return (NULL);
+	if (s1 != NULL && s2 == NULL)
+	{
+		p = (char *) malloc(len1);
+		for (i = 0; i < len1; i++)
+			*(p + i) = s1[i];
+	}
 
-	for (i = 0; i < len1; i++)
-		*(p + i) = s1[i];
-	for (i = 0; i < len2; i++)
-		*(p + len1 + i) = s2[i];
+	if (s1 == NULL && s2 != NULL)
+	{
+		 p = (char *) malloc(len2);
+		 for (i = 0; i < len2; i++)
+			 *(p + i) = s2[i];
+	}
+
+	if (s1 != NULL && s2 != NULL)
+	{
+		totLen = len1 + len2;
+		p = (char *) malloc(totLen + 1);
+
+		for (i = 0; i < len1; i++)
+			*(p + i) = s1[i];
+		for (i = 0; i < len2; i++)
+			*(p + len1 + i) = s2[i];
+	}
 
 	return (p);
 }
