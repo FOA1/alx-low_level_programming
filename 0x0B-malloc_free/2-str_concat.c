@@ -44,7 +44,7 @@ char *str_concat(char *s1, char *s2)
 			*(p + len1 + i) = s2[i];
 	}
 	if (p == NULL)
-		return (NULL)
+		return (NULL);
 
 	return (p);
 }
