@@ -13,7 +13,8 @@ void free_grid(int **grid, int height)
 	if (grid == NULL)
 	{
 		_putchar('O');
-		_putchar('k');
+		_putchar('K');
+		_putchar('\n');
 	}
 	while (height >= 0)
 	{
