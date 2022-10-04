@@ -12,10 +12,16 @@ char *str_concat(char *s1, char *s2)
 	unsigned int i = 0, len1 = 0, len2 = 0, totLen = 0;
 	char *p;
 
-	for (i = 0; s1[i] != '\0'; i++)
-		len1++;
-	for (i = 0; s2[i] != '\0'; i++)
-		len2++;
+	if (s1 != NULL)
+	{
+		for (i = 0; s1[i] != '\0'; i++)
+			len1++;
+	}
+	if (s2 != NULL)
+	{
+		for (i = 0; s2[i] != '\0'; i++)
+			len2++;
+	}
 
 	if (s1 == NULL && s2 == NULL)
 		return (NULL);
