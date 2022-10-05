@@ -1,5 +1,19 @@
 #include "main.h"
 #include <stdlib.h>
+ /**
+  * _strlen - prints the length of a string
+  *
+  * @s: the sting whose length is to be printed
+  * Return: length of the string
+  */
+int _strlen(char *s)
+{
+	int l = 0;
+
+	while (s[l] != '\0')
+		l++;
+	return (l);
+}
 /**
  * argstostr - a function that concatenate its arguments
  * @ac: Acount of the supplied arguments
@@ -27,19 +41,10 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	for (i = 0; i < ac; i++)
 	{
-		p[i] = (char *) malloc(_strlen(av[i]) + 1);
+		p[i] = (char *) malloc(_strlen(av[i]));
 		if (p[i] == NULL)
-		{
-			while (i >= 0)
-			{
-				free(p[i]);
-				i--;
-			}
-			free(p);
 			return (NULL);
-		}
 	}
-
 	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; av[i][j] != '\0'; j++)
