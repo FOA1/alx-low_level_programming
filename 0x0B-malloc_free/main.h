@@ -10,6 +10,7 @@
 	void free_grid(int **grid, int height);
 	int _putchar(char c);
 	char *argstostr(int ac, char **av);
+	int _strlen(char *s);
 
 
 #endif /* MAIN-H */
