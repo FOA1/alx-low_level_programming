@@ -1,19 +1,24 @@
 #include "dog.h"
+#include <stdlib.h>
 /**
+ * new_dog - creates a new dog using Malloc
  *
+ * @name: The name of the dog
+ * @age: The age
+ * @owner: The Owner of the dog
  *
- *
- *
+ * Return: a pointer to the new_dog created
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	typedef struct dog_t new_dog;
+	dog_t *ptr;
 
-	(*new_dog).name = name;
-	(*new_dog).age = age;
-	(*new_dog).owner = owner;
-
-	if (new_dog == NULL)
+	ptr = malloc(sizeof(dog_t));
+	if (ptr == NULL)
 		return (NULL);
-	return (new_dog);
+	ptr->name = name;
+	ptr->age = age;
+	ptr->owner = owner;
+
+	return (ptr);
 }
