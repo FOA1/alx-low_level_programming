@@ -31,7 +31,7 @@ char *_strcpy(char *dest, char *src)
 {
 	int i;
 
-	for (i = 0; src[i] != '\0'; i++)
+	for (i = 0; src[i]; i++)
 	{
 		dest[i] = src[i];
 	}
@@ -78,9 +78,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 	_strcpy(newOwner, owner);
 
-	ptr->name = name;
+	ptr->name = newName;
 	ptr->age = age;
-	ptr->owner = owner;
+	ptr->owner = newOwner;
 
 	return (ptr);
 }
