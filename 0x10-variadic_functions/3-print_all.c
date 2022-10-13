@@ -22,31 +22,31 @@ void print_all(const char * const format, ...)
 		{
 			switch (format[i])
 			{
-				case 'c' :
+				case 'c':
 				{
 					c = va_arg(print_any, int);
-					printf("%c", c);
+					printf("%c, ", c);
 					break;
 
 				}
-				case 'i' :
+				case 'i':
 				{
 					x = va_arg(print_any, int);
-					printf("%d", x);
+					printf("%d, ", x);
 					break;
 				}
-				case 'f' :
+				case 'f':
 				{
 					d = va_arg(print_any, double);
-					printf("%f", d);
+					printf("%f, ", d);
 					break;
 				}
-				case 's' :
+				case 's':
 				{
 					p = va_arg(print_any, char *);
 					if (p == NULL)
 						printf("(nil)");
-					printf("%s", p);
+					printf("%s, ", p);
 					break;
 				}
 				default :
