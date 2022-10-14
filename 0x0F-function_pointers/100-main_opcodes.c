@@ -1,7 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-int main(int arg c, char **argv)
+/**
+ * main - prints the opcodes of its own main function
+ *
+ * @argc: the argument count
+ * @argv: the argument vector
+ *
+ * Return: zero
+ */
+int main(int argc, char **argv)
 {
 	int k, nbytes;
 	char *buffer;
@@ -9,23 +16,23 @@ int main(int arg c, char **argv)
 	k = 0, buffer = (char *)main;
 	if (argc != 2)
 	{
-		print("Error\n");
+		printf("Error\n");
 		exit(1);
 	}
 
 	nbytes = atoi(argv[k]);
 	if (nbytes < 0)
 	{
-		print("Error\n");
+		printf("Error\n");
 		exit(2);
 	}
-	while (k < byte)
+	while (k < nbytes)
 	{
-		If (k == byte - 1)
+		if (k == nbytes - 1)
 		{
-			print("%02fhhx", buffer[k]);
+			printf("%02dhhx", buffer[k]);
 		}
-		print("%02hhx ", buffer[k]);
+		printf("%02hhx ", buffer[k]);
 		k++;
 	}
 	return (0);
