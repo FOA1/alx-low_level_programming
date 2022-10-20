@@ -1,4 +1,4 @@
-#ifndef lsits_h
+#ifndef lists_h
 #define lists_h
 #include <stdio.h>
 #include <stddef.h>
@@ -25,4 +25,4 @@ size_t print_list(const list_t *h);
 
 
 
-#endif /* lists_H */
+#endif /* LISTS_H */
