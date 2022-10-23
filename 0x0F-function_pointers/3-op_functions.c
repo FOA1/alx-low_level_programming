@@ -8,10 +8,7 @@
  */
 int op_add(int a, int b)
 {
-	int sum;
-
-	sum = a + b;
-	return (sum);
+	return (a + b);
 }
 
 /**
@@ -23,10 +20,7 @@ int op_add(int a, int b)
  */
 int op_sub(int a, int b)
 {
-	int sub;
-
-	sub = a - b;
-	return (sub);
+	return (a - b);
 }
 
 /**
@@ -39,10 +33,7 @@ int op_sub(int a, int b)
  */
 int op_mul(int a, int b)
 {
-	int mul;
-
-	mul = a * b;
-	return (mul);
+	return (a * b);
 }
 
 /**
@@ -56,8 +47,13 @@ int op_mul(int a, int b)
 
 int op_div(int a, int b)
 {
-	int div;
+	int div = 0;
 
+	if (b == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
 	div = a / b;
 	return (div);
 }
@@ -73,8 +69,10 @@ int op_div(int a, int b)
 
 int op_mod(int a, int b)
 {
-	int mod;
-
-	mod = a % b;
-	return (mod);
+	if (b == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	return (a % b);
 }
