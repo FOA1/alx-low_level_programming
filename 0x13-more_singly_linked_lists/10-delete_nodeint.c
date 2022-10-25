@@ -1,46 +1,38 @@
 #include "lists.h"
 /**
- * insert_nodeint_at_index - inserts a new node at a given position.
- *
- * @head: the head node
- * @idx: the position to add the new node
- * @n: the input data for the node
- *
- * Return: a pointer to the node of the given index
+ * delete_nodeint_at_index - deletes the node by a given
+ *                           index of a linked list
+ * @head : pointer to the head of the list
+ * @index: index of the node to be deleted
+ *         (indices starting at 0)
+ * Return: 1 - if function succeeds,
+ *        -1 - if function fails
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	listint_t *temp, *temp2;
-	unsigned int len = 0, i;
+listint_t *tmp, *copy = *head;
+unsigned int node;
 
-	if (*head == NULL)
-		return (-1);
-	temp = *head;
-	while (temp != NULL)
-	{
-		temp = temp->next;
-		len++;
-	}
-	if (idx >= len)
-		return (-1);
-	temp = *head;
-	if (index == 0)
-	{
-		*head = (*head)->next;
-		free(temp);
-	}
-	else if (idx == (len - 1))
-	{
-		while (temp->next != NULL)
-			temp = temp->next;
-		free(temp);
-	}
-	else
-	{
-		for (i = 0; i < (idx - 1); i++)
-			temp = temp->next;
-		newnode->next = temp->next;
-		temp->next = newnode;
-	}
-	return (newnode);
+if (copy == NULL)
+return (-1);
+
+if (index == 0)
+{
+*head = (*head)->next;
+free(copy);
+return (1);
+}
+
+for (node = 0; node < (index - 1); node++)
+{
+if (copy->next == NULL)
+return (-1);
+
+copy = copy->next;
+}
+
+tmp = copy->next;
+copy->next = tmp->next;
+free(tmp);
+return (1);
 }
