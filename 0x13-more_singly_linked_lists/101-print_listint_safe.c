@@ -1,5 +1,3 @@
-x13-more_singly_linked_lists/101-print_listint_safe.c
-@@ -0,0 +1,69 @@
 #include "lists.h"
 
 /**
