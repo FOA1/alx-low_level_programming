@@ -31,13 +31,13 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned int bit = 0;
 
-	if (index > 63)
-		return(-1);
-	bit = _pow(2, index);
-
-	if ((n & bit) >= 1)
-		return (1);
-	if ((n & bit) == 0)
-		return (0);
+	if (index < 64)
+	{
+		bit = _pow(2, index);
+		if ((n & bit) >= 1)
+			return (1);
+		if ((n & bit) == 0)
+			return (0);
+	}
 	return (-1);
 }
