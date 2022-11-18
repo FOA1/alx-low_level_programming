@@ -1,11 +1,11 @@
 #include "main.h"
 #include <stdlib.h>
- /**
-  * _strlen - prints the length of a string
-  *
-  * @s: the sting whose length is to be printed
-  * Return: length of the string
-  */
+
+/**
+ * _strlen - prints the length of a string
+ * @s: the sting whose length is to be printed
+ * Return: length of the string
+ */
 int _strlen(char *s)
 {
 	int l = 0;
@@ -35,15 +35,23 @@ char *argstostr(int ac, char **av)
 		av[i][j] = '\n';
 	}
 	/* int _strlen(char *s) */
-	p = (char **) malloc(ac * 8);
+	p = (char **) malloc((ac + 1) * 8);
 
 	if (p == NULL)
 		return (NULL);
 	for (i = 0; i < ac; i++)
 	{
-		p[i] = (char *) malloc(_strlen(av[i]));
+		p[i] = (char *) malloc(_strlen(av[i]) + 1);
 		if (p[i] == NULL)
+		{
+			while (i >= 0)
+			{
+				free(p[i]);
+				i--;
+			}
+			free(p);
 			return (NULL);
+		}
 	}
 	for (i = 0; i < ac; i++)
 	{

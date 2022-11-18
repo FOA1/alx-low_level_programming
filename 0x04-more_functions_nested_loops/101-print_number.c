@@ -1,5 +1,4 @@
 #include "main.h"
-#include <limits.h>
 /**
  * print_l - prints long integers using _putchar
  *
@@ -26,8 +25,6 @@ void print_l(int l_num)
 			print_l(l_num / 10);
 		_putchar(l_num % 10 + '0');
 	}
-}
-
 /**
  * print_number - takes input and call the funtion
  * print_long to print long integers
